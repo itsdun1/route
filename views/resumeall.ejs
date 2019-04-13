@@ -1,0 +1,561 @@
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title><%= data2.name %></title>
+
+	<!--meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="Gaurav, gaurav, gauravlabhane, Gaurav Labhane, IIIT PUNE, Indian Institute of Information Technology Pune" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--//meta tags ends here-->
+	<!--booststrap-->
+	<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<!--//booststrap end-->
+	<!-- font-awesome icons -->
+	<link href="/css/font-awesome.css" rel="stylesheet">
+	<!-- //font-awesome icons -->
+	<!-- <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'> -->
+<!-- Nav-CSS -->	
+<link href="/css/nav.css" rel="stylesheet" type="text/css" media="all" />
+ <script src="/js/modernizr.custom.js"></script>
+<!-- //Nav-CSS -->	
+	<link rel="stylesheet" href="/css/lightbox.css">
+	<!--gallery-->
+
+	<!--stylesheets-->
+	<link href="/css/styleall1.css" rel='stylesheet' type='text/css' media="all">
+	<!--//stylesheets-->
+
+	<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+
+</head>
+<body>
+
+    
+<!-- navigation section -->
+<% var b = "/api/images2/" + data2.username %>
+<% console.log(b) %>
+<% var c = "url(" + b + ")"; %>
+<% console.log(c) %>
+	<div class="header-outs" id="one"  style=" background: <%=c %>;
+         background-repeat: no-repeat;
+            background-position: center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -ms-background-size: cover;
+            min-height: 800px;
+            "> 
+		<div class="header-w3layouts">
+		<div class="container">
+
+<div class="right-side"> 
+<p>
+		<button id="trigger-overlay" type="button">
+			<span class="fa fa-bars" aria-hidden="true"></span>
+		</button>
+		</p>
+</div>
+	<!-- open/close -->
+		<div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close">Close</button>
+			<nav>
+				<ul>
+					<li><a href="#index.html" class="scroll">Home</a></li>
+					<li><a href="#about" class="scroll" >About</a></li>
+					<li><a href="#education" class="scroll" >Qualification</a></li>
+					<li><a href="#experience" class="scroll" >Experience and Projects</a></li>
+					
+					<li><a href="#contact" class="scroll" >Contact</a></li>
+					
+				</ul>
+			</nav>
+		</div>
+					<div class="hedder-logo">
+				<h1><a href="index.html">Intro</a></h1>
+		</div>
+	<!-- /open/close -->
+<!-- /navigation section -->
+</div>
+<div class="clearfix"> </div>
+
+</div>
+<!-- Slideshow 4 -->
+		<div class="slider">
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider4">
+					<li>
+						<div class="slider-img">
+							<div class="container">
+								<div class="slider-info">
+									<h4><%= data2.name %>
+										</h4>
+									<p>Student at <%= data2.collage %></p>
+
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slider-img ">
+							<div class="container">
+								<div class="slider-info">
+									<h4> <%= data2.passion %>
+										 </h4>
+									<p>My Passion</p>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<!-- This is here just to demonstrate the callbacks -->
+		<!-- <ul class="events">
+      <li>Example 4 callback events</li>
+    </ul>-->
+</div>
+<!-- //banner -->
+<!--about -->
+	<div class="about" id="about">
+		<div class="container">
+		<div class="col-md-4 about-left back-shadow">
+            <% var a = "/api/images/" + data2.username %>
+            <% console.log(a) %>
+					<img src="<%= a%>" class="img-responsive" alt="Image">
+				</div>
+				<div class="col-md-7 about-right">
+				<div class="about-me">
+				<h2><%= data2.name %> </h2>
+				<h4>Student at <%= data2.collage %></h4>
+				</div>
+				<div class="w3layouts_more-buttn">
+				<p> <%= data2.intro %> </p>
+				<div class="buttn-about">
+								<a href="#info">Read More</a>
+							</div>
+					<div class="social-icons">
+
+					<ul>
+						<li><a href='<%= data2.facebook %>' target="_blank"><span class="fa fa-facebook"></span></a></li>
+						<li><a href="<%= data2.instagram %>" target="_blank"><span class="fa fa-instagram"></span></a></li>
+						<li><a href="<%= data2.linkdin %>" target="_blank"><span class="fa fa-linkedin"></span></a></li>
+						
+					</ul>
+				</div>
+							</div>
+							
+				</div>
+				<div class="clearfix"> </div>
+				<div class="my-ser-info" id="info">
+				<div class="col-md-5 my-datas">
+				<h3>My Personal Data</h3>
+				<ul class="address">
+										<li>
+							<ul class="address-text ">
+								<li><b>Name </b></li>
+								<li>:<%= data2.name %></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text ">
+								<li><b>D.O.B </b></li>
+								<li>:<%= data2.dob %></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>PHONE </b></li>
+								<li>:<%= data2.number1 %></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>ADDRESS </b></li>
+								<li>:<%= data2.address1 %> ,  <%= data2.address2 %></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="address-text">
+								<li><b>E-MAIL </b></li>
+								<li>:<a href=<%= data2.email1 %>><%= data2.email1 %></a></li>
+							</ul>
+						</li>
+						<!-- <li> -->
+							<!-- <ul class="address-text">
+								<li><b>WEBSITE </b></li>
+								<li><a href="https://www.gauravlabhane.gq">: www.gauravlabhane.gq</a></li>
+							</ul>
+						</li> -->
+					</ul> 
+			<div class="hire-w3lgrids">
+						<a href="#" class="there-more"> 
+							Download				
+						</a> 
+						<a href="#contact" class="there-more"> 
+						Get in touch
+						</a>
+					</div>
+				</div>
+				<div class="col-md-7 aboutmy-services">
+                                
+                                <% for(var i=0 ; i< data2.skill.length ; i++) {  %>
+                                 <% var array = ['about-gap clr-green back-shadow','about-gap back-shadow',"about-gap back-shadow","about-gap clr-green back-shadow"]  %>       
+								<div class="col-md-6 col-sm-6 col-xs-6 about-ser-grid ">
+								<div class="<%= array[i] %>" style="overflow-y:scroll; height: 215px">
+								<span class="fa fa-star"style="font-size:36px;color:white;float:right;" aria-hidden="true"></span>
+								<h3><%= data2.skillname[i] %></h3>
+								<p><%= data2.skill[i] %>    </p>
+								</div>
+								<div class="clearfix"> </div>
+                                </div>
+                                
+                                <% } %>
+
+								<!-- <div class="col-md-6 col-sm-6 col-xs-6 about-ser-grid ">
+								<div class="about-gap back-shadow">
+								<span class="fa fa-mobile" aria-hidden="true"></span>
+								<h3>Web Design</h3>
+								<p> data2.skill[1]</p>
+								</div>
+								<div class="clearfix"> </div>
+								</div>
+
+								<div class="col-md-6 col-sm-6 col-xs-6 about-ser-grid ">
+								<div class="about-gap back-shadow">
+								<span class="fa fa-database" aria-hidden="true"></span
+>								<h3>Database</h3>
+                           		<p> data2.skill[2] </p>
+								</div>
+								<div class="clearfix"> </div>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6 about-ser-grid " >
+
+								<div class="about-gap clr-green back-shadow">
+								<span class="fa fa-picture-o" aria-hidden="true"></span>
+								<h3>Photography</h3>
+								<p> data2.skill[0] </p>
+								</div>
+								<div class="clearfix"> </div>
+								</div>
+								 -->
+							</div>	
+							<div class="clearfix"> </div>
+							</div>
+							<div class="clearfix"> </div>
+
+</div>
+
+<div class="experience" id="education">
+
+	<div class="container">
+		<div class="education">
+		<div class="col-md-5 education-info" >
+		 <h4>education</h4>
+		</div>
+		<div class="col-md-7 education-matter">
+		<div class="edu-right back-shadow ">
+		<h6><%= data2.startYearss %>-<%=  data2.endYearss %></h6>
+		<h5>SSC</h5>
+		<p><%= data2.schoolN %></p>
+		</div>
+		<div class="edu-right back-shadow clr-green">
+				<h6><%= data2.startYearhs %>-<%= data2.endYearhs %></h6>
+		<h5>HSC</h5>
+		<p><%= data2.schoolhscn %></p>
+		</div>
+		
+		<div class="edu-right back-shadow ">
+				<h6><%= data2.startYearcol %>-<%= data2.endYearcoll %></h6>
+		<h5>Bachelor Of Technology</h5>
+		<p><%= data2.collage %></p>
+		</div>
+		</div>
+	
+		</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="experience-info " id = "experience">
+		<div class="col-md-7 exp-matter">
+		
+		
+			<% for(var i = 0 ; i < data2.experience.length ; i ++ ){ %>
+				<% var array = ['exp-left back-shadow','exp-left back-shadow clr-green','exp-left back-shadow','exp-left back-shadow clr-green'] %>
+				
+				<div class=' <%= array[i] %> '>
+
+		<h5><%= data2.experienceN[i] %></h5>
+		<p><%= data2.experience[i] %></p>
+		</div>
+		<% } %>
+		<!-- <div class="exp-left back-shadow clr-green">
+				
+		<h5>Intern</h5>
+		<p>Intern at college of engineering Pune, Malware Detection</p>
+		</div> -->
+
+		<!-- <div class="exp-left back-shadow">
+		<h6>Present</h6>
+		<h5>Minor Project</h5>
+		<p>Working on minor project for Developing a website for a small scale business</p>
+		</div> -->
+		
+		
+		</div>
+		</div>
+		<div class="col-md-5 exp-info-right">
+		 <h4>experience & projects</h4>
+		</div>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+	</div>
+<!-- gallery-->
+	<!-- <div id="gallery" class="gallery">
+	<div class="container">
+			<h3 class="title clr">Gallery</h3>
+			<div class="gallery-info">
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids">
+					<a href="images/g1.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g1.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids">
+					<a href="images/g2.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g2.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids">
+					<a href="images/g3.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g3.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids">
+					<a href="images/g4.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g4.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids grid-mdl">
+					<a href="images/g5.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g5.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids  grid-mdl">
+					<a href="images/g6.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g6.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids  grid-mdl">
+					<a href="images/g7.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g7.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids  grid-mdl">
+					<a href="images/g8.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g8.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids  grid-mdl">
+					<a href="images/g9.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g9.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+								<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids  grid-mdl">
+					<a href="images/g12.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g12.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids  grid-mdl">
+					<a href="images/g10.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g10.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 gallery-grids  grid-mdl">
+					<a href="images/g11.jpg" class="gallery-box" data-lightbox="example-set" data-title="">
+					<img src="images/g11.jpg" alt="" class="img-responsive zoom-img">
+				</a>
+				</div>
+			</div>
+	</div>
+	</div> -->
+	<!-- //gallery-->
+<!--contact-->
+	<div class="contact" id="contact">
+		<div class="container">
+			<h3 class="title">Contact</h3>
+						<div class="contact-us">
+				<form action="/sendmail" method="post">
+					<div class="col-md-6 col-sm-6 col-xs-6 styled-input">
+						<input type="text" name="name" placeholder="First Name" required="">
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-6 styled-input">
+						<input type="text" name="lname" placeholder="Last Name" required="">
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-6 styled-input">
+						<input type="email" name="email" placeholder="Email" required="">
+
+					</div>
+
+					<div class="col-md-6 col-sm-6 col-xs-6 styled-input">
+
+						<input type="text" name="phone" placeholder="phone" required="">
+
+                    </div>
+                    <input type="hidden" name="route" value="<%= data2.username %>">
+					<div class="clearfix"> </div>
+					<div class="styled-input">
+
+						<textarea name="message" placeholder="message"  required=""></textarea>
+					</div>
+					<input type="hidden" name="emails" value=<%= data2.email1 %>>
+					<div>
+						<div class="click">
+							<input type="submit" value="SEND">
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="clearfix"> </div>
+			
+			<div class=" col-md-12 col-sm-12 col-xs-5 contact-icons">
+				 <div class="col-md-4">
+				<div class="footer_grid_left">
+					<h5>Address</h5>
+					<p><%= data2.address1 %> ,<span><%= data2.address2 %>
+					</span></p>
+				</div>
+			</div>
+			 <div class="col-md-4">
+				<div class="footer_grid_left">
+					<h5> Contact</h5>
+					<p><%= data2.number1 %> <span><%= data2.number2 %></span></p>
+				</div>
+			</div>
+
+				 <div class="col-md-4 ">
+				<div class="footer_grid_left">
+					<h5>Email</h5>
+					<p><a href="<%= data2.email1 %>"><%= data2.email1 %></a>
+					<span><a href="<%= data2.email2 %>"><%= data2.email2 %></a></span></p>
+				</div>
+			</div>
+
+			</div>
+			<div class="clearfix"> </div>
+
+
+
+		
+		</div>
+	</div>
+
+<footer>
+<div class="social-icons">
+
+					<ul>
+						<li><a href='<%= data2.facebook %>' target="_blank"><span class="fa fa-facebook"></span></a></li>
+						<li><a href='<%= data2.instagram %>'  target="_blank"><span class="fa fa-instagram"></span></a></li>
+						<li><a href='<%= data2.linkdin %>'  target="_blank"><span class="fa fa-linkedin"></span></a></li>
+						
+					</ul>
+				</div>
+
+		
+	</footer>
+	<!--js working-->
+	<script src='/js/jquery-2.2.3.min.js'></script>
+	<script src="/js/bootstrap.js"></script>
+	<!--//js working-->
+	<!--nav menu-->
+		<script src="/js/classie.js"></script>
+		<script src="/js/demo1.js"></script>
+<!-- //nav menu-->	
+	<!-- gallery -->
+	<script src="/js/lightbox-plus-jquery.min.js"></script>
+	<!-- //gallery -->
+<!--banner-->
+
+	<script src="/js/responsiveslides.min.js"></script>
+
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: false,
+				nav: true,
+				speed: 900,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!--// banner-->
+	<!-- OnScroll-Number-Increase-JavaScript -->
+	<script src="/js/jquery.waypoints.min.js"></script>
+	<script src="/js/jquery.countup.js"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+	<!-- //OnScroll-Number-Increase-JavaScript -->
+
+<!-- start-smoth-scrolling -->
+	<script src="/js/move-top.js"></script>
+	<script src="/js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 900);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script>
+		$(document).ready(function () {
+
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+			};
+
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+    </script>
+    
+    
+
+
+	<!-- //here ends scrolling icon -->
+</body>
+
+</html>
